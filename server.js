@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+
+const port = process.enviroment.port||3000;
+
 require('./hbs/helpers');
 
 
@@ -30,4 +33,4 @@ app.get('/about',(req,res)=>{
 
 ////////////SERVER//////////////
 
-app.listen(3000,()=>{console.log(`Escuchando peticiones en el puerto 3000`)})
+app.listen(port,()=>{console.log(`Escuchando peticiones en el puerto ${port}`)})
